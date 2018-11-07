@@ -1,0 +1,140 @@
+
+header
+{
+    text-align: center!important;
+    padding:20px 0px 10px 20px;
+}
+ img 
+{
+max-height: 50px;
+    }
+
+
+.ads
+{
+    text-align: center;
+    background-color: white;
+    margin:auto;
+    width: 60%;
+    padding: 15px;
+    color:#d9d7d7;
+    margin-bottom: 30px;
+  
+}
+.ads span {
+    font-family: "Proxima Nova";
+    font-size: 49px;
+    
+    color: #d9d7d7;
+}
+#textarea {
+    padding: 30px 50px 0px 50px;
+    -webkit-appearance: textarea;
+  
+    height: 300px;
+    background-color: white;
+    color: #989898;
+    font-family: "Proxima Nova";
+
+
+
+text-transform: uppercase;
+}
+#textarea:focus{
+ 
+    outline: none;
+    
+}
+
+.content
+{
+    margin: auto;
+    max-width: 1039px;  
+}
+.content .buttons 
+{
+    margin-bottom: 30px;
+    /* Style for "Rectangle" */
+
+
+}
+.content .buttons button 
+{
+    border-radius: 6px;
+    border: 2px solid #c5a0f7;
+    background-color: transparent;
+   
+
+color: #ffffff;
+font-family: "Proxima Nova";
+
+
+
+}
+.selected {
+    /* Style for "Rectangle" */
+  background-color: #c5a0f7!important;
+}
+footer{
+    background-color: #0a1948;
+    text-align: center;
+    
+}
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+ 
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+  .btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    
+    line-height: 1.33;
+    border-radius: 35px;
+  }
+  .fon{
+      z-index: 2;
+      text-align: center;
+      margin: -20px 0px 20px 0px;
+  }
+  .fon button 
+  {
+      background-color: #f2224a;
+  }
+  .fon i{
+      color: white!important;
+  }
+  .big
+  {
+    transform: scale(1.7,1.7) ; 
+  }
+ footer .lien 
+ {
+     padding: 20px 0px 10px 0px;
+     /* Style for "Télecharge" */
+
+
+
+ }
+ .lien a 
+ {
+    color: #ffffff;
+    font-family: "Proxima Nova";
+ 
+
+
+ }
+ .by
+ {
+    padding-bottom: 20px;
+ }
+.by span
+ {
+
+color: #606a88;
+font-family: "Proxima Nova";
+}
