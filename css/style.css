@@ -7,9 +7,21 @@ header
  img 
 {
 max-height: 50px;
-    }
-
-
+}
+.fon button 
+{
+  
+    padding: 50px 10px;
+}
+.fon img {
+    position: relative;
+    height: 20px;
+    width: 17.5px;
+    top:-2px;
+    left: -1px;;
+    
+    
+}
 .ads
 {
     text-align: center;
@@ -55,11 +67,14 @@ text-transform: uppercase;
 {
     margin-bottom: 30px;
     /* Style for "Rectangle" */
+    padding: 0px 40px 0px 40px;
 
 
 }
+
 .content .buttons button 
 {
+    margin:0px 0px 10px 10px;
     border-radius: 6px;
     border: 2px solid #c5a0f7;
     background-color: transparent;
@@ -70,6 +85,11 @@ font-family: "Proxima Nova";
 
 
 
+}
+.content .buttons  button:focus
+{
+    outline: none!important;
+    border: 2px solid #c5a0f7!important;
 }
 .selected {
     /* Style for "Rectangle" */
