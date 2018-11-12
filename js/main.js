@@ -2,13 +2,25 @@
     $(document).ready(function(){
         document.getElementById("userinput").focus();
         $('[data-toggle="tooltip"]').tooltip(); 
+         new ClipboardJS('.btnCopy');
+         $('#userinput').keyup(function(){
+            $(".btn").removeClass("selected");
+        });
+
     });
   
 
     document.getElementById("btnTitleCase").addEventListener("click", function(){
         $(".btn").removeClass("selected");
       document.getElementById("btnTitleCase").classList.add('selected');
-     
+      var userText = document.getElementById("userinput").value;
+      
+     var  str = userText.toLowerCase().split(' ');
+	for (var i = 0; i < str.length; i++) {
+		str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    document.getElementById("userinput").value =str.join(' ');
+
   
       document.getElementById("userinput").focus();
   
@@ -192,24 +204,26 @@ document.getElementById("btnAlternatingCase").addEventListener("click", function
     $(".btn").removeClass("selected");
 document.getElementById("userinput").value = "";
 document.getElementById("userinput").focus();
-                                                                                            
-                                                                                            });
-        
-        //Copy Button to copy content of textarea
-        
-        document.getElementById("btnCopy").addEventListener("click", function(){
-        
-                                                                                            let userText = document.getElementById("userinput").value;
-        
-                                                                                            /* Select the text field */
-                                                                                              userText.select();
-        
-                                                                                              /* Copy the text inside the text field */
-                                                                                              document.execCommand("copy");
-        
-                                                                                              /* Alert the copied text */
-                                                                                              alert("Copied the text: " + userText.value);
-                                                                                              document.getElementById("userinput").focus();
-                                                                                            
-                                                                                            });
+});
+document.getElementById("btnDownload").addEventListener("click", function(){
+    var textToWrite = document.getElementById('userinput').value;
+    var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
+      var fileNameToSaveAs = "essay.text";
+    var downloadLink = document.createElement("a");
+     downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null) {
+    // Chrome allows the link to be clicked without actually adding it to the DOM.
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    } else {
+    // Firefox requires the link to be added to the DOM before it can be clicked.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+     downloadLink.onclick = destroyClickedElement;
+     downloadLink.style.display = "none";
+     document.body.appendChild(downloadLink);
+     }
+    downloadLink.click();
+    
+});
+
                                                                                            
